@@ -75,8 +75,8 @@ it('lets user2 buy a star and decreases its balance in ether', async() => {
 
 it('adds the token name and token symbol properly', async() => {
     let instance = await StarNotary.deployed();
-    let name = await instance.getName();
-    let symbol = await instance.getSymbol();
+    let name = await instance.name();
+    let symbol = await instance.symbol();
     assert.equal(name, "Hadeel Token");
     assert.equal(symbol, "HT");
 

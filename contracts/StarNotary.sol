@@ -4,7 +4,7 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol"
 
 contract StarNotary is ERC721 {
     string public tName;
-    string public symbol;
+    string public tSymbol;
 
     struct Star {
         string name;
@@ -15,14 +15,14 @@ contract StarNotary is ERC721 {
 
     constructor() public {
         tName = "Hadeel Token";
-        symbol = "HT";
+        tSymbol = "HT";
 
     }
-    function getName()public view returns(string memory){
+    function name()public view returns(string memory){
         return tName;
     }
-    function getSymbol()public view returns(string memory){
-        return symbol;
+    function symbol()public view returns(string memory){
+        return tSymbol;
     }
     //a function lookUptokenIdToStarInfo, that looks up the stars using the Token ID, and then returns the name of the star.
     function lookUptokenIdToStarInfo(uint256 _tokenId) public view returns (string memory starName){
